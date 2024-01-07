@@ -22,7 +22,7 @@ namespace SeleniumTest.Tests
         [SetUp]
         public void Setup()
         {
-            driver.Navigate().GoToUrl("https://www.saucedemo.com/");
+           loginPage.GoToPage();
         }
         
         [Test]

@@ -22,6 +22,12 @@ namespace SeleniumTest.Pages
         public IWebElement loginButton => driver.FindElement(By.Id("login-button"));
         public IWebElement ErrorMessage => driver.FindElement(By.CssSelector("[data-test=\"error\"]"));
 
+        public void GoToPage()
+        {
+            driver.Navigate().GoToUrl("https://www.saucedemo.com/");
+            driver.Manage().Window.Maximize();
+        }
+
         public void Login(string username=null, string password=null)
         {
             if(username == null)
